@@ -1,0 +1,6 @@
+<div *ngIf="agreement">
+  <h2>{{agreement.lessor}} to {{agreement.lessee}}</h2>
+  <p>Start date {{agreement.startDate | date:'dd MMM yyyy'}}</p>
+  <p>End date {{agreement.endDate | date:'dd MMM yyyy'}}</p>
+</div>
+

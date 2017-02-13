@@ -1,0 +1,35 @@
+<div class="container text-center">    
+  <h2>Portfolio</h2>
+
+  <div class="block-area" id="tableStriped">
+    <div >
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kind</th>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>ID 1</th>
+                    <th>ID 2</th>
+                    <th>ParentID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let asset of assets" (click)="gotoDetail(asset)">
+                  <td>{{asset.id}}</td> 
+                  <td>{{asset.assetKind}}</td>
+                  <td>{{asset.assetModel}}</td>
+                  <td>{{asset.assetType}}</td>
+                  <td>{{asset.idRef1}}</td>
+                  <td>{{asset.idRef2}}</td>
+                  <td>{{asset.parentId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</div>
+

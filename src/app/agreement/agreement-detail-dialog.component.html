@@ -1,0 +1,31 @@
+
+
+  <div layout="row">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Agreement Details</span>
+        </h2>
+      </div>
+    </md-toolbar>
+
+</div>
+
+ <md-dialog-content>   
+      <agreement-detail [agreementId]='agree.id'></agreement-detail>
+    </md-dialog-content>
+
+    <md-dialog-actions [attr.align]="actionsAlignment">
+      <button
+        md-raised-button
+        color="primary"
+        md-dialog-close>Close</button>
+
+      <a
+        md-button
+        color="primary"
+        href="https://en.wikipedia.org/wiki/Neptune"
+        target="_blank">Open in new window</a>
+      </md-dialog-actions>
+
+    

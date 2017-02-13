@@ -1,0 +1,32 @@
+<div class="container text-center">    
+  <h2>Util for {{assetId}}</h2>
+
+  <div class="block-area" id="tableStriped">
+    <div >
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>AssetID</th>
+                    <th>TypeID</th>
+                    <th>TypeName</th>
+                    <th>Amount</th>
+                    <th>Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let autil of util">
+                  <td>{{autil.id}}</td> 
+                  <td>{{autil.assetId}}</td>
+                  <td>{{autil.utilTypeId}}</td>
+                  <td>{{autil.utilTypeName}}</td>
+                  <td>{{autil.amount}}</td>
+                  <td>{{autil.limit}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+

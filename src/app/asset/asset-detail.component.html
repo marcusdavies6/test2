@@ -1,0 +1,84 @@
+<div *ngIf="asset">
+<div class="container-fluid text-center">   
+  <div class="row content"> 
+
+    <div class="col-sm-2 sidenav">
+      <div class="background">
+        <img class="bk_image" src="http://iccjet.iccjet.netdna-cdn.com/images/stories/aircraft_for_sale/airbus/a320/images/AIRBUS_A320_FOR_SALE_PHOTO_1.jpg"
+          width="150" height="120">
+      <div class="transbox">
+      <p id="sidebar_type">A320-200</p>
+      <p id="sidebar_id">AB-CDE</p>
+      <p id="sidebar_id">123456</p>
+      </div>
+      </div>
+      <p></p>
+
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Overview</a></li>
+        <li><a href="#">Technical</a></li>
+        <li><a href="#">Sub assets</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Forecast</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-10"> 
+      <div class="row" style="height: 200px;" >
+        <div class="col-sm-8"> 
+        <button md-icon-button [mdMenuTriggerFor]="menu"
+          style="position: absolute; top: 0; left: 20px;">
+          <md-icon>more_vert</md-icon>
+        </button>
+          <h1>{{asset.idRef1}} {{asset.idRef2}}</h1>
+          <h3>{{asset.assetKind}} {{asset.assetModel}}-{{asset.assetType}}</h3>
+        </div>
+        <div class="col-sm-4"> 
+          <img style='padding: 20px; height: 100%; width: 100%; object-fit: contain' src="http://iccjet.iccjet.netdna-cdn.com/images/stories/aircraft_for_sale/airbus/a320/images/AIRBUS_A320_FOR_SALE_PHOTO_1.jpg"
+            >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"> 
+          <util-detail [assetId]='asset.id'></util-detail>
+        </div>
+        <div class="col-sm-6"> 
+          <asset-agreements [assetId]='asset.id'></asset-agreements>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"> 
+           <h4>Cash Flow</h4>
+           <chart *ngIf="visCashFlowChart" [type]="cashflowtype" [data]="cashflowdata" [options]="cashflowoptions"></chart>  
+        </div>
+        <div class="col-sm-6"> 
+           <h4>Asset Value</h4>
+           <chart *ngIf="visCashFlowChart" [type]="cashflowtype" [data]="cashflowdata" [options]="cashflowoptions"></chart>  
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>  
+
+        <md-menu #menu="mdMenu">
+          <button md-menu-item>
+            <md-icon>person_add</md-icon>
+            <span>Share</span>
+          </button>
+          <button md-menu-item>
+            <md-icon>file_download</md-icon>
+            <span>Download PDF</span>
+          </button>
+          <button md-menu-item>
+            <md-icon>email</md-icon>
+            <span>Email</span>
+          </button>
+        </md-menu> 
+
+<p>
+
+  <button (click)="goBack()">Back</button>
+
+
+</div>
+
